@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="jp.pizzafactory.mruby"
+      label="PizzaFactory for mruby"
+      version="0.0.1.qualifier"
+      provider-name="PizzaFactory Project">
+
+   <description url="http://www.pizzafactory.jp/">
+      PizzaFactory for mruby.
+   </description>
+
+   <copyright>
+      EPL-1.0
+   </copyright>
+
+   <license url="">
+      Beta version. Use as your own risk.
+   </license>
+
+   <plugin
+         id="jp.pizzafactory.mruby.builder.minirake"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="jp.pizzafactory.mruby.wizard.newproject"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+</feature>
