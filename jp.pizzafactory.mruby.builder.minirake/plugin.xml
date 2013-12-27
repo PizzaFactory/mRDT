@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension
+         id="minirakeBuilder"
+         name="Minirake Builder"
+         point="org.eclipse.core.resources.builders">
+      <builder
+            hasNature="true">
+         <run
+               class="jp.pizzafactory.mruby.builder.minirake.builder.MinirakeBuilder">
+         </run>
+      </builder>
+   </extension>
+   <extension
+         id="mrubyNature"
+         name="Mruby  Nature"
+         point="org.eclipse.core.resources.natures">
+      <runtime>
+         <run
+               class="jp.pizzafactory.mruby.builder.minirake.builder.MrubyNature">
+         </run>
+      </runtime>
+      <builder
+            id="jp.pizzafactory.mruby.builder.minirake.minirakeBuilder">
+      </builder>
+   </extension>
+
+</plugin>
