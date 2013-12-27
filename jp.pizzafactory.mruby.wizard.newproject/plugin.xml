@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+	<extension point="org.eclipse.ui.newWizards">
+		<category id="jp.pizzafactory.mruby" name="Mruby"/>
+		<wizard
+        category="jp.pizzafactory.mruby"
+        class="jp.pizzafactory.mruby.wizard.newproject.MinirakeProjectWizard"
+        icon="icons/mruby.png"
+        id="jp.pizzafactory.mruby.wizard.newproject"
+        name="minirake project"
+        project="true">
+			<description>ppChoose to create a new minirake Project</description>
+			<selection class="org.eclipse.core.resources.IResource"/>
+		</wizard>
+	</extension>
+</plugin>
