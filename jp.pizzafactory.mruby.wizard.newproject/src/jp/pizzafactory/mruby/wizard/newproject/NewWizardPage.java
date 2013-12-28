@@ -7,8 +7,8 @@ public class NewWizardPage extends WizardNewProjectCreationPage {
 
 	public NewWizardPage(String pageName) {
 		super(pageName);
-		setTitle("New mruby project.");
-		setMessage("Create New Mruby Project");
+		setTitle(pageName);
+		setDescription("Create New Mruby Project");
 		
 		ImageDescriptor image = Activator.imageDescriptorFromPlugin(Activator.PLUGIN_ID, "icons/mruby.png");
 		setImageDescriptor(image);
