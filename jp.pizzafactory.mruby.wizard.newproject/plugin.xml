@@ -10,7 +10,7 @@
         id="jp.pizzafactory.mruby.wizard.newproject"
         name="minirake project"
         project="true">
-			<description>ppChoose to create a new minirake Project</description>
+			<description>Choose to create a new minirake Project</description>
 			<selection class="org.eclipse.core.resources.IResource"/>
 		</wizard>
 	</extension>
