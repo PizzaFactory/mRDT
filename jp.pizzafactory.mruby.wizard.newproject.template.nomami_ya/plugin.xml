@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="jp.pizzafactory.mruby.wizard.newproject.template">
+      <template
+            class="jp.pizzafactory.mruby.wizard.newproject.template.nomami_ya.MrubyTemplate"
+            name="monami-ya.mrb (breeding edge)">
+      </template>
+   </extension>
+
+</plugin>
