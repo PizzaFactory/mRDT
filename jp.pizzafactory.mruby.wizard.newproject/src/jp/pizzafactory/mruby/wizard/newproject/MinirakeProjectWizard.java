@@ -24,6 +24,7 @@ import org.eclipse.ui.IWorkbench;
 public class MinirakeProjectWizard extends Wizard implements INewWizard,
 		IRunnableWithProgress {
 	NewWizardPage newWizardPage = new NewWizardPage("New Mruby Project");
+	TemplateSelectionWizardPage templateSelectionWizardPage = new TemplateSelectionWizardPage("Select code template");
 
 	@Override
 	public void init(IWorkbench workbench, IStructuredSelection selection) {
@@ -33,6 +34,7 @@ public class MinirakeProjectWizard extends Wizard implements INewWizard,
 	public void addPages() {
 		super.addPages();
 		addPage(newWizardPage);
+		addPage(templateSelectionWizardPage);
 	}
 
 	@Override
@@ -80,6 +82,7 @@ public class MinirakeProjectWizard extends Wizard implements INewWizard,
 		try {
 			IProject cdtProject = CCorePlugin.getDefault().createCDTProject(
 					projectDescription, project, monitor);
+			templateSelectionWizardPage.deploy(cdtProject, monitor);
 		} catch (OperationCanceledException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
