@@ -4,12 +4,12 @@
   xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>jp.pizzafactory.muby</groupId>
-  <artifactId>jp.pizzafactory.mruby</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
-  <packaging>eclipse-feature</packaging>
+  <version>1.0.0-SNAPSHOT</version>
+  <groupId>jp.pizzafactory</groupId>
+  <artifactId>jp.pizzafactory.mruby.wizard.newproject</artifactId>
+  <packaging>eclipse-plugin</packaging>
 
-  <name>PizzaFactory for mruby feature</name>
+  <name>PizzaFactory for mruby newproject wizard</name>
 
   <parent>
     <groupId>jp.pizzafactory</groupId>
