@@ -17,6 +17,14 @@
       Beta version. Use as your own risk.
    </license>
 
+   <url>
+      <discovery label="PizzaFactory for mruby" url="http://update.pizzafactory.jp/mruby/8/"/>
+   </url>
+
+   <requires>
+      <import feature="org.eclipse.dltk.ruby" version="3.0.0.v20110424-7Z--E_EkMYXO4k101442"/>
+   </requires>
+
    <plugin
          id="jp.pizzafactory.mruby.builder.minirake"
          download-size="0"
