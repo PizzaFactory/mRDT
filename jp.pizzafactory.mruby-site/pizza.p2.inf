@@ -1,0 +1,3 @@
+instructions.configure=\
+	  org.eclipse.equinox.p2.touchpoint.eclipse.addRepository(type:0,name:PizzaFactory for mruby,location:http${#58}//update.pizzafactory.jp/mruby/);\
+	  org.eclipse.equinox.p2.touchpoint.eclipse.addRepository(type:1,name:PizzaFactory for mruby,location:http${#58}//update.pizzafactory.jp/mruby/);

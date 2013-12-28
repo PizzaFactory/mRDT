@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <feature url="features/jp.pizzafactory.mruby_0.0.0.qualifier.jar" id="jp.pizzafactory.mruby">
+      <category name="PizzaFactory for mruby"/>
+   </feature>
+   <category-def name="PizzaFactory for mruby" label="PizzaFactory for mruby"/>
+</site>
