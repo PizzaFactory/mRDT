@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?eclipse version="3.4"?>
 <plugin>
+   <extension-point id="template" name="mruby template files." schema="schema/template.exsd"/>
 	<extension point="org.eclipse.ui.newWizards">
 		<category id="jp.pizzafactory.mruby" name="Mruby"/>
 		<wizard
