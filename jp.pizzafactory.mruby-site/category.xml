@@ -3,5 +3,17 @@
    <feature url="features/jp.pizzafactory.mruby_0.0.0.qualifier.jar" id="jp.pizzafactory.mruby">
       <category name="PizzaFactory for mruby"/>
    </feature>
+   <feature url="org.eclipse.dltk.ruby_3.0.0.v20110424-7Z--E_EkMYXO4k101442" id="org.eclipse.dltk.ruby">
+      <category name="PizzaFactory for mruby"/>
+   </feature>
+   <feature url="org.eclipse.dltk.core_3.0.0.v20101211-0331-7l-2ED-z0UkhYdtV3_LBO" id="org.eclipse.dltk.core">
+      <category name="PizzaFactory for mruby"/>
+   </feature>
+   <feature url="org.eclipse.emf.ecore_2.7.1.v20120127-1122" id="org.eclipse.emf.ecore">
+      <category name="PizzaFactory for mruby"/>
+   </feature>
+   <feature url="org.eclipse.emf.common_2.7.1.v20120127-1122" id="org.eclipse.emf.common">
+      <category name="PizzaFactory for mruby"/>
+   </feature>
    <category-def name="PizzaFactory for mruby" label="PizzaFactory for mruby"/>
 </site>
