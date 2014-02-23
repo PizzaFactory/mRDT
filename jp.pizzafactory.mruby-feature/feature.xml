@@ -40,6 +40,13 @@
          unpack="false"/>
 
    <plugin
+         id="jp.pizzafactory.mruby.wizard.newproject.template.forum"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
          id="jp.pizzafactory.mruby.wizard.newproject.template.monami_ya"
          download-size="0"
          install-size="0"
