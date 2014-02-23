@@ -30,7 +30,7 @@
           <version>1.0-beta-4</version>
           <configuration>
             <serverId>aws-release</serverId>
-            <url>s3://update.pizzafactory.jp/mruby/8/</url>
+            <url>s3://update.pizzafactory.jp/mruby/8</url>
             <fromDir>target/repository</fromDir>
             <toDir>build_${project.version}</toDir>
           </configuration>
