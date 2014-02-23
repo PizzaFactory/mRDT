@@ -46,6 +46,7 @@
     <module>jp.pizzafactory.mruby-feature</module>
     <module>jp.pizzafactory.mruby.wizard.newproject.template.forum</module>
     <module>jp.pizzafactory.mruby.wizard.newproject.template.monami_ya</module>
+    <module>jp.pizzafactory.mruby.wizard.newproject.template.yamanekko</module>
     <module>jp.pizzafactory.mruby.builder.minirake</module>
     <module>jp.pizzafactory.mruby.wizard.newproject</module>
     <module>jp.pizzafactory.mruby-site</module>

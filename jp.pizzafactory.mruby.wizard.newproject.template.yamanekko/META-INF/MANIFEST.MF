@@ -1,0 +1,12 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Mruby template set for yamanekko releases
+Bundle-SymbolicName: jp.pizzafactory.mruby.wizard.newproject.template.yamanekko;singleton:=true
+Bundle-Version: 0.0.1.qualifier
+Bundle-Activator: jp.pizzafactory.mruby.wizard.newproject.template.yamanekko.Activator
+Bundle-Vendor: PizzaFactory Project.
+Require-Bundle: org.eclipse.core.runtime,
+ jp.pizzafactory.mruby.wizard.newproject;bundle-version="1.0.0",
+ org.eclipse.core.resources
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-ActivationPolicy: lazy
