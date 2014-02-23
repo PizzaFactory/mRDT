@@ -5,7 +5,7 @@
          point="jp.pizzafactory.mruby.wizard.newproject.template">
       <template
             class="jp.pizzafactory.mruby.wizard.newproject.template.yamanekko.MrubyTemplate"
-            name="mruby Forum (core only)">
+            name="mruby for Raspberry Pi bare-metal (yamanekko release)">
       </template>
    </extension>
 
