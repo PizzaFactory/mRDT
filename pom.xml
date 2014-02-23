@@ -44,7 +44,7 @@
   <modules>
     <module>build-target</module>
     <module>jp.pizzafactory.mruby-feature</module>
-    <module>jp.pizzafactory.mruby.wizard.newproject.template.nomami_ya</module>
+    <module>jp.pizzafactory.mruby.wizard.newproject.template.monami_ya</module>
     <module>jp.pizzafactory.mruby.builder.minirake</module>
     <module>jp.pizzafactory.mruby.wizard.newproject</module>
     <module>jp.pizzafactory.mruby-site</module>

@@ -4,7 +4,7 @@
    <extension
          point="jp.pizzafactory.mruby.wizard.newproject.template">
       <template
-            class="jp.pizzafactory.mruby.wizard.newproject.template.nomami_ya.MrubyTemplate"
+            class="jp.pizzafactory.mruby.wizard.newproject.template.monami_ya.MrubyTemplate"
             name="monami-ya.mrb (breeding edge)">
       </template>
    </extension>

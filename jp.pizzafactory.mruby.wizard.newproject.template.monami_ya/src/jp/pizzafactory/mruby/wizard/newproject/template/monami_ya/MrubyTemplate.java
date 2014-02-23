@@ -1,4 +1,4 @@
-package jp.pizzafactory.mruby.wizard.newproject.template.nomami_ya;
+package jp.pizzafactory.mruby.wizard.newproject.template.monami_ya;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
