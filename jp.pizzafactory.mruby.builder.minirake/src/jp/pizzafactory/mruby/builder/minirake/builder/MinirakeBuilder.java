@@ -9,6 +9,7 @@ import org.eclipse.cdt.core.resources.IConsole;
 import org.eclipse.cdt.ui.CUIPlugin;
 import org.eclipse.core.resources.IFile;
 import org.eclipse.core.resources.IProject;
+import org.eclipse.core.resources.IResource;
 import org.eclipse.core.resources.IncrementalProjectBuilder;
 import org.eclipse.core.runtime.CoreException;
 import org.eclipse.core.runtime.IProgressMonitor;
@@ -56,6 +57,7 @@ public class MinirakeBuilder extends IncrementalProjectBuilder {
 				container.runScriptlet("RakeApp.new.run");
 			} catch (IOException e) {
 			}
+			project.refreshLocal(IResource.DEPTH_INFINITE, monitor);
 		}
 		return null;
 	}
