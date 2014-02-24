@@ -54,6 +54,10 @@ public class MinirakeBuilder extends IncrementalProjectBuilder {
 				container.setOutput(new PrintStream(console.getOutputStream()));
 
 				container.runScriptlet("load 'minirake'");
+				
+				if (kind == CLEAN_BUILD) {
+					container.runScriptlet("ARGV << 'clean'");
+				}
 				container.runScriptlet("RakeApp.new.run");
 			} catch (IOException e) {
 			}
