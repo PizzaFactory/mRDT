@@ -45,7 +45,7 @@ public class MinirakeBuilder extends IncrementalProjectBuilder {
 						LocalVariableBehavior.TRANSIENT);
 
 				if (kind == CLEAN_BUILD) {
-					container.setArgv(new String[] { "clean" });
+					container.put("ARGV", new String[] { "clean" });
 				}
 
 				String rootPath = project.getLocationURI().getPath();
