@@ -44,6 +44,10 @@ public class MinirakeBuilder extends IncrementalProjectBuilder {
 						LocalContextScope.SINGLETHREAD,
 						LocalVariableBehavior.TRANSIENT);
 
+				if (kind == CLEAN_BUILD) {
+					container.setArgv(new String[] { "clean" });
+				}
+
 				String rootPath = project.getLocationURI().getPath();
 				ArrayList<String> arrayList = new ArrayList<String>();
 				arrayList.add(rootPath);
@@ -54,10 +58,6 @@ public class MinirakeBuilder extends IncrementalProjectBuilder {
 				container.setOutput(new PrintStream(console.getOutputStream()));
 
 				container.runScriptlet("load 'minirake'");
-				
-				if (kind == CLEAN_BUILD) {
-					container.runScriptlet("ARGV << 'clean'");
-				}
 				container.runScriptlet("RakeApp.new.run");
 			} catch (IOException e) {
 			}
