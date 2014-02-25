@@ -37,6 +37,7 @@ public class MinirakeBuilder extends IncrementalProjectBuilder {
 
 		IFile file = project.getFile("minirake");
 		if (file.exists() && file.isAccessible()) {
+			debugLog("minirake found.");
 			try {
 				init();
 
@@ -56,8 +57,10 @@ public class MinirakeBuilder extends IncrementalProjectBuilder {
 
 				if (kind == CLEAN_BUILD) {
 					container.put("ARGV", new String[] { "clean" });
+					debugLog("Selected CLEAN_BUILD");
 				} else if (kind == FULL_BUILD) {
 					container.put("ARGV", new String[] { "clean", "all" });
+					debugLog("Selected FULL_BUILD");
 				}
 
 				container.setError(new PrintStream(console.getErrorStream()));
@@ -70,7 +73,17 @@ public class MinirakeBuilder extends IncrementalProjectBuilder {
 						Activator.PLUGIN_ID, "Failed to spawn minirake", e));
 			}
 			project.refreshLocal(IResource.DEPTH_INFINITE, monitor);
+		} else {
+			debugLog("minirake not found.");
 		}
 		return null;
+	}
+
+	private void debugLog(String message) {
+		if (Activator.DEBUG) {
+			IStatus status = new Status(IStatus.INFO, Activator.PLUGIN_ID,
+					message);
+			Activator.getDefault().getLog().log(status);
+		}
 	}
 }

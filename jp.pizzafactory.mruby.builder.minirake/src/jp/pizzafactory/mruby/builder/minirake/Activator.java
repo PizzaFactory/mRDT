@@ -1,5 +1,6 @@
 package jp.pizzafactory.mruby.builder.minirake;
 
+import org.eclipse.core.runtime.Platform;
 import org.eclipse.jface.resource.ImageDescriptor;
 import org.eclipse.ui.plugin.AbstractUIPlugin;
 import org.osgi.framework.BundleContext;
@@ -14,7 +15,10 @@ public class Activator extends AbstractUIPlugin {
 
 	// The shared instance
 	private static Activator plugin;
-	
+
+	public static final boolean DEBUG = "true".equalsIgnoreCase(Platform
+			.getDebugOption(PLUGIN_ID + "/debug"));
+
 	/**
 	 * The constructor
 	 */
