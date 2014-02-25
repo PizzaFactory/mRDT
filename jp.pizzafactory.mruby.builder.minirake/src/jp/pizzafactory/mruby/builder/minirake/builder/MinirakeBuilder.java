@@ -38,12 +38,13 @@ public class MinirakeBuilder extends IncrementalProjectBuilder {
 		IFile file = project.getFile("minirake");
 		if (file.exists() && file.isAccessible()) {
 			debugLog("minirake found.");
+
+			IConsole console = CUIPlugin.getDefault().getConsoleManager()
+					.getConsole(project);
+			console.start(project);
+
 			try {
 				init();
-
-				IConsole console = CUIPlugin.getDefault().getConsoleManager()
-						.getConsole(project);
-				console.start(project);
 
 				ScriptingContainer container = new ScriptingContainer(
 						LocalContextScope.SINGLETHREAD,
@@ -71,6 +72,15 @@ public class MinirakeBuilder extends IncrementalProjectBuilder {
 			} catch (IOException e) {
 				throw new CoreException(new Status(IStatus.ERROR,
 						Activator.PLUGIN_ID, "Failed to spawn minirake", e));
+			} finally {
+				try {
+					console.getOutputStream().close();
+				} catch (IOException e) {
+				}
+				try {
+					console.getErrorStream().close();
+				} catch (IOException e) {
+				}
 			}
 			project.refreshLocal(IResource.DEPTH_INFINITE, monitor);
 		} else {
