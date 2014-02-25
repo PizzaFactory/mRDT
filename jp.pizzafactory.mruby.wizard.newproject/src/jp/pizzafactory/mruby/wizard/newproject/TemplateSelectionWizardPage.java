@@ -54,12 +54,10 @@ public class TemplateSelectionWizardPage extends WizardPage {
 		setNoActionTemplate();
 
 		IExtensionRegistry registry = Platform.getExtensionRegistry();
-		// 拡張ポイントを取得
 		IExtensionPoint point = registry.getExtensionPoint(Activator
 				.getDefault().getBundle().getSymbolicName()
 				+ ".template");
 
-		// コントリビュートされた拡張を取得
 		IExtension[] extensions = point.getExtensions();
 
 		for (IExtension extension : extensions) {
