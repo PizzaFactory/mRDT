@@ -26,7 +26,8 @@ import org.eclipse.ui.IWorkbench;
 public class MinirakeProjectWizard extends Wizard implements INewWizard,
 		IRunnableWithProgress {
 	NewWizardPage newWizardPage = new NewWizardPage("New Mruby Project");
-	TemplateSelectionWizardPage templateSelectionWizardPage = new TemplateSelectionWizardPage("Select code template");
+	TemplateSelectionWizardPage templateSelectionWizardPage = new TemplateSelectionWizardPage(
+			"Select code template");
 
 	@Override
 	public void init(IWorkbench workbench, IStructuredSelection selection) {
@@ -66,7 +67,7 @@ public class MinirakeProjectWizard extends Wizard implements INewWizard,
 	public void run(IProgressMonitor monitor) throws InvocationTargetException,
 			InterruptedException {
 		String projectName = newWizardPage.getProjectName();
-//		URI locationURI = newWizardPage.getLocationURI();
+		// URI locationURI = newWizardPage.getLocationURI();
 
 		IWorkspace workspace = ResourcesPlugin.getWorkspace();
 		IWorkspaceRoot workspaceRoot = workspace.getRoot();
@@ -76,10 +77,11 @@ public class MinirakeProjectWizard extends Wizard implements INewWizard,
 
 		IProjectDescription projectDescription = workspace
 				.newProjectDescription(project.getName());
-//		projectDescription.setLocationURI(locationURI);
+		// projectDescription.setLocationURI(locationURI);
 		monitor.worked(1);
-		
-		projectDescription.setNatureIds(new String[] { MrubyNature.NATURE_ID, CCNATURE_ID });
+
+		projectDescription.setNatureIds(new String[] { MrubyNature.NATURE_ID,
+				CCNATURE_ID });
 		monitor.worked(1);
 
 		ICommand command = projectDescription.newCommand();
