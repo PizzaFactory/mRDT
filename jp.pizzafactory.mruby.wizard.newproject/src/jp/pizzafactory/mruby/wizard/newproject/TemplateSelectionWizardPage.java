@@ -12,7 +12,9 @@ import org.eclipse.core.runtime.IExtension;
 import org.eclipse.core.runtime.IExtensionPoint;
 import org.eclipse.core.runtime.IExtensionRegistry;
 import org.eclipse.core.runtime.IProgressMonitor;
+import org.eclipse.core.runtime.IStatus;
 import org.eclipse.core.runtime.Platform;
+import org.eclipse.core.runtime.Status;
 import org.eclipse.jface.resource.ImageDescriptor;
 import org.eclipse.jface.wizard.WizardPage;
 import org.eclipse.swt.SWT;
@@ -80,8 +82,11 @@ public class TemplateSelectionWizardPage extends WizardPage {
 					}
 				}
 			} catch (CoreException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
+				Activator
+				.getDefault()
+				.getLog()
+				.log(new Status(IStatus.ERROR, Activator.PLUGIN_ID,
+						"Error", e));
 			}
 			list.setSelection(0);
 		}

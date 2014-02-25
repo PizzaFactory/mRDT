@@ -14,7 +14,9 @@ import org.eclipse.core.resources.IWorkspaceRoot;
 import org.eclipse.core.resources.ResourcesPlugin;
 import org.eclipse.core.runtime.CoreException;
 import org.eclipse.core.runtime.IProgressMonitor;
+import org.eclipse.core.runtime.IStatus;
 import org.eclipse.core.runtime.OperationCanceledException;
+import org.eclipse.core.runtime.Status;
 import org.eclipse.jface.operation.IRunnableWithProgress;
 import org.eclipse.jface.viewers.IStructuredSelection;
 import org.eclipse.jface.wizard.Wizard;
@@ -43,11 +45,17 @@ public class MinirakeProjectWizard extends Wizard implements INewWizard,
 			getContainer().run(false, true, this);
 			return true;
 		} catch (InvocationTargetException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			Activator
+			.getDefault()
+			.getLog()
+			.log(new Status(IStatus.ERROR, Activator.PLUGIN_ID,
+					"Error", e));
 		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			Activator
+			.getDefault()
+			.getLog()
+			.log(new Status(IStatus.ERROR, Activator.PLUGIN_ID,
+					"Error", e));
 		}
 		return false;
 	}
@@ -84,11 +92,13 @@ public class MinirakeProjectWizard extends Wizard implements INewWizard,
 					projectDescription, project, monitor);
 			templateSelectionWizardPage.deploy(cdtProject, monitor);
 		} catch (OperationCanceledException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			Activator
+					.getDefault()
+					.getLog()
+					.log(new Status(IStatus.CANCEL, Activator.PLUGIN_ID,
+							"Cancel", e));
 		} catch (CoreException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			throw new InvocationTargetException(e);
 		}
 	}
 }
