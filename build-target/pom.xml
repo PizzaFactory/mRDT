@@ -4,9 +4,7 @@
     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>jp.pizzafactory</groupId>
   <artifactId>product-target</artifactId>
-  <version>8.0.4-SNAPSHOT</version>
   <packaging>eclipse-target-definition</packaging>
 
   <name>PizzaFactory (Target definition)</name>

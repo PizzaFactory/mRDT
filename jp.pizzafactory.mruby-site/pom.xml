@@ -11,8 +11,6 @@
       <relativePath>../pom.xml</relativePath>
     </parent>
 
-    <version>0.0.1-SNAPSHOT</version>
-    <groupId>jp.pizzafactory</groupId>
     <artifactId>jp.pizzafactory.mruby.site</artifactId>
     <packaging>eclipse-repository</packaging>
 
