@@ -6,6 +6,7 @@
 
   <artifactId>jp.pizzafactory.mruby.wizard.newproject.template.forum</artifactId>
   <packaging>eclipse-plugin</packaging>
+  <version>1.0.0</version>
 
   <name>PizzaFactory for mruby : code template for forum release</name>
 

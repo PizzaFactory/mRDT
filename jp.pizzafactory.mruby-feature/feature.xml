@@ -2,7 +2,7 @@
 <feature
       id="jp.pizzafactory.mruby"
       label="PizzaFactory for mruby"
-      version="0.0.1.qualifier"
+      version="1.0.0.qualifier"
       provider-name="PizzaFactory Project">
 
    <description url="http://www.pizzafactory.jp/">
