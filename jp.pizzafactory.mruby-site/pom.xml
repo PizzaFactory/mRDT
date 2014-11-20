@@ -8,7 +8,7 @@
       <groupId>jp.pizzafactory</groupId>
       <artifactId>mruby</artifactId>
       <version>1.0.0-SNAPSHOT</version>
-      <relativePath>../pom.xml</relativePath>
+      <relativePath>../jp.pizzafactory.mruby.parent/pom.xml</relativePath>
     </parent>
 
     <artifactId>jp.pizzafactory.mruby.site</artifactId>
