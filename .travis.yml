@@ -7,7 +7,7 @@ before_script:
 - git clone https://${GH_TOKEN}@github.com/PizzaFactory/mRDT.git p2repo
 - (cd p2repo && git checkout gh-pages)
 script: mvn -f jp.pizzafactory.mruby.parent/pom.xml install
-on_success:
+after_success:
 - cp -r jp.pizzafactory.mruby-site/target/repository/ p2repo/travis-build-${TRAVIS_BUILD_NUMBER}/
 - (cd p2repo && git add . && ruby -e 'print "Hello!"' && git push)
 env:
