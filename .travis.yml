@@ -3,7 +3,7 @@ before_script:
 - git config --global user.email "monaka@monami-ya.jp"
 - git config --global user.name "Masaki Muranaka"
 - git config credential.helper "store --file=.git/credentials"
-- git echo "https://${GH_TOKEN}@github.com" > .git/credentials
+- echo "https://${GH_TOKEN}@github.com" > .git/credentials
 - git clone https://${GH_TOKEN}@github.com/PizzaFactory/mruby.git p2repo
 - (cd p2repo && git checkout gh-pages)
 script: mvn -f jp.pizzafactory.mruby.parent/pom.xml install
