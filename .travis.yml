@@ -1,0 +1,17 @@
+language: java
+before_script:
+- git config --global user.email "monaka@monami-ya.jp"
+- git config --global user.name "Masaki Muranaka"
+- git config credential.helper "store --file=.git/credentials"
+- git echo "https://${GH_TOKEN}@github.com" > .git/credentials
+- git clone https://${GH_TOKEN}@github.com/PizzaFactory/mruby.git p2repo
+- (cd p2repo && git checkout gh-pages)
+script: mvn -f jp.pizzafactory.mruby.parent/pom.xml install
+on_success:
+- cp -r jp.pizzafactory.mruby-site/target/repository/ p2repo/travis-build-${TRAVIS_BUILD_NUMBER}/
+- (cd p2repo && git add . && ruby -e 'print "Hello!"' && git push)
+env:
+  global:
+  - GIT_COMMITTER_NAME="Masaki Muranaka"
+  - GIT_COMMITTER_EMAIL="monaka@monami-ya.jp"
+  - secure: G7GSae9EJHdmmF1Nbv25vRuX9bKyedlVd7C6spIOJ/rX0AOoTRhZpWIrp8gvEdDc9Mock2djfpHsWwUYCkpW1yorao8MSY2u9SX5lu9vF0ACPdsqiRamvHEkVeu/nipf1fNBGkB5d2Ejdt4vMBUIuadK2c3PEbZqQULbRwgAG/k=
