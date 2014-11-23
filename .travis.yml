@@ -4,7 +4,7 @@ before_script:
 - git config --global user.name "Masaki Muranaka"
 - git config credential.helper "store --file=.git/credentials"
 - echo "https://${GH_TOKEN}@github.com" > .git/credentials
-- git clone https://${GH_TOKEN}@github.com/PizzaFactory/mruby.git p2repo
+- git clone https://${GH_TOKEN}@github.com/PizzaFactory/mRDT.git p2repo
 - (cd p2repo && git checkout gh-pages)
 script: mvn -f jp.pizzafactory.mruby.parent/pom.xml install
 on_success:
