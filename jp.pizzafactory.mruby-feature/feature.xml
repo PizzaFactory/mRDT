@@ -6,7 +6,7 @@
       provider-name="PizzaFactory Project">
 
    <description url="http://www.pizzafactory.jp/">
-      PizzaFactory for mruby.
+      mRuby Development Tool for PizzaFactory.
    </description>
 
    <copyright>
@@ -22,7 +22,7 @@
    </license>
 
    <url>
-      <discovery label="PizzaFactory for mruby" url="http://update.pizzafactory.jp/mruby/8/"/>
+      <discovery label="mRDT for PizzaFactory" url="http://update.pizzafactory.jp/mruby/"/>
    </url>
 
    <requires>
