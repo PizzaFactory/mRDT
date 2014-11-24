@@ -61,7 +61,7 @@
     </repository>
     <repository>
       <id>Indigo 201106220900</id>
-      <name>PizzaFactory 8 Express</name>
+      <name>Indigo 201106220900</name>
       <url>http://download.eclipse.org/releases/indigo/201106220900</url>
       <layout>p2</layout>
     </repository>
