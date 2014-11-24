@@ -179,6 +179,20 @@
         <version>2.2.1</version>
       </plugin>
 
+      <!-- Testing -->
+        <plugin>
+          <groupId>org.eclipse.tycho</groupId>
+          <artifactId>tycho-surefire-plugin</artifactId>
+          <version>${tycho-version}</version>
+          <configuration>
+            <useUIHarness>false</useUIHarness>
+            <includes>
+              <include>**/*Test.java</include>
+            </includes>
+            <!-- Kill test JVM if tests take more than 10 minutes (600 seconds) to finish -->
+            <forkedProcessTimeoutInSeconds>600</forkedProcessTimeoutInSeconds>
+          </configuration>
+        </plugin>
     </plugins>
 
     <extensions>
