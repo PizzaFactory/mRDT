@@ -65,20 +65,6 @@
       <url>http://download.eclipse.org/releases/indigo/201106220900</url>
       <layout>p2</layout>
     </repository>
-    <repository>
-      <id>aws-snapshot</id>
-      <name>e2studio snapshot</name>
-      <url>http://update.pizzafactory.jp/pizzafactory-tycho-repo/snapshot</url>
-      <snapshots>
-        <enabled>true</enabled>
-        <updatePolicy>always</updatePolicy>
-      </snapshots>
-    </repository>
-    <repository>
-      <id>aws-release</id>
-      <name>e2studio release</name>
-      <url>http://update.pizzafactory.jp/pizzafactory-tycho-repo/release</url>
-    </repository>
   </repositories>
 
   <build>
@@ -197,9 +183,9 @@
 
     <extensions>
       <extension>
-        <groupId>org.springframework.build.aws</groupId>
-        <artifactId>org.springframework.build.aws.maven</artifactId>
-        <version>3.0.0.RELEASE</version>
+        <groupId>net.anzix.aws</groupId>
+        <artifactId>s3-maven-wagon</artifactId>
+        <version>3.2</version>
       </extension>
     </extensions>
 
@@ -207,14 +193,14 @@
 
   <distributionManagement>
     <repository>
-      <id>aws-release</id>
-      <name>AWS Release Repository</name>
-      <url>s3://update.pizzafactory.jp/pizzafactory-tycho-repo/release/</url>
+      <id>dist-release</id>
+      <name>Release Repository</name>
+      <url>${pizza.dist.release}</url>
     </repository>
     <snapshotRepository>
-      <id>aws-snapshot</id>
-      <name>AWS Snapshot Repository</name>
-       <url>s3://update.pizzafactory.jp/pizzafactory-tycho-repo/snapshot</url>
+      <id>dist-snapshot</id>
+      <name>Snapshot Repository</name>
+      <url>${pizza.dist.snapshot}</url>
     </snapshotRepository>
   </distributionManagement>
 
