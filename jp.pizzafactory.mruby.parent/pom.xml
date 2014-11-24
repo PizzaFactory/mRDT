@@ -54,6 +54,18 @@
 
   <repositories>
     <repository>
+      <id>PizzaFactory8</id>
+      <name>PizzaFactory 8 Express</name>
+      <url>http://update.pizzafactory.jp/express/8/build_v20121204-0528/</url>
+      <layout>p2</layout>
+    </repository>
+    <repository>
+      <id>Indigo 201106220900</id>
+      <name>PizzaFactory 8 Express</name>
+      <url>http://download.eclipse.org/releases/indigo/201106220900</url>
+      <layout>p2</layout>
+    </repository>
+    <repository>
       <id>aws-snapshot</id>
       <name>e2studio snapshot</name>
       <url>http://update.pizzafactory.jp/pizzafactory-tycho-repo/snapshot</url>
