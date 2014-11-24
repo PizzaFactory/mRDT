@@ -52,22 +52,6 @@
     <module>../jp.pizzafactory.mruby-site</module>
   </modules>
 
-  <profiles>
-    <profile>
-      <id>platform-indigo</id>
-      <activation>
-        <property>
-          <name>platform-version-name</name>
-          <value>indigo</value>
-        </property>
-      </activation>
-      <properties>
-        <eclipse-site>http://download.eclipse.org/releases/indigo</eclipse-site>
-        <platform-version>[3.7,3.8)</platform-version>
-      </properties>
-    </profile>
-  </profiles>
-
   <repositories>
     <repository>
       <id>aws-snapshot</id>
