@@ -7,7 +7,27 @@
   <artifactId>jp.pizzafactory.mruby.wizard.newproject.template.monami_ya</artifactId>
   <packaging>eclipse-plugin</packaging>
 
-  <name>PizzaFactory for mruby : code template for monami-ya.mrb</name>
+  <name>mRDT Code Templates (monami-ya.mrb)</name>
+  <description>mruby code templates based on monami-ya.mrb releases</description>
+
+  <licenses>
+    <license>
+      <name>Eclipse Public License 1.0</name>
+      <url>https://www.eclipse.org/legal/epl-v10.html</url>
+    </license>
+    <license>
+      <name>MIT license (covers mruby files)</name>
+      <url>https://bitbucket.org/monami_ya_mrb/monami-ya.mrb/raw/master/MITL</url>
+    </license>
+    <license>
+      <name>Public Domain (covers baisoku.org tlsf)</name>
+      <comments>
+Two Level Segregated Fit memory allocator implementation.
+Written by Matthew Conte (matt@baisoku.org).
+Public Domain, no restrictions.
+      </comments>
+    </license>
+  </licenses>
 
   <parent>
     <groupId>jp.pizzafactory</groupId>

@@ -14,6 +14,16 @@
     <artifactId>jp.pizzafactory.mruby.site</artifactId>
     <packaging>eclipse-repository</packaging>
 
+    <name>P2 Update Site Generator</name>
+    <description>p2 Update Site for mRDT</description>
+
+  <licenses>
+    <license>
+      <name>Eclipse Public License 1.0</name>
+      <url>https://www.eclipse.org/legal/epl-v10.html</url>
+    </license>
+  </licenses>
+
     <build>
       <plugins>
 

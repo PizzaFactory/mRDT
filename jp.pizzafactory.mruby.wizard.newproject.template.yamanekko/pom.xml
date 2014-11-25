@@ -7,7 +7,19 @@
   <artifactId>jp.pizzafactory.mruby.wizard.newproject.template.yamanekko</artifactId>
   <packaging>eclipse-plugin</packaging>
 
-  <name>PizzaFactory for mruby : code template for yamanekko release</name>
+  <name>mRDT Code Templates (yamanekko releases)</name>
+  <description>mruby code templates based on yamanekko releases</description>
+
+  <licenses>
+    <license>
+      <name>Eclipse Public License 1.0</name>
+      <url>https://www.eclipse.org/legal/epl-v10.html</url>
+    </license>
+    <license>
+      <name>MIT license (covers mruby files)</name>
+      <url>https://raw.githubusercontent.com/mruby/mruby/master/MITL</url>
+    </license>
+  </licenses>
 
   <parent>
     <groupId>jp.pizzafactory</groupId>

@@ -7,7 +7,15 @@
   <artifactId>jp.pizzafactory.mruby.wizard.newproject</artifactId>
   <packaging>eclipse-plugin</packaging>
 
-  <name>PizzaFactory for mruby newproject wizard</name>
+  <name>New-project wizard</name>
+  <description>New-project wizard core (mRDT)</description>
+
+  <licenses>
+    <license>
+      <name>Eclipse Public License 1.0</name>
+      <url>https://www.eclipse.org/legal/epl-v10.html</url>
+    </license>
+  </licenses>
 
   <parent>
     <groupId>jp.pizzafactory</groupId>

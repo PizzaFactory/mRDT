@@ -8,7 +8,19 @@
   <packaging>eclipse-plugin</packaging>
   <version>1.0.0</version>
 
-  <name>PizzaFactory for mruby : code template for forum release</name>
+  <name>mRDT Code templates (mruby forum)</name>
+  <description>mruby code templates based on mruby forum releases</description>
+
+  <licenses>
+    <license>
+      <name>Eclipse Public License 1.0</name>
+      <url>https://www.eclipse.org/legal/epl-v10.html</url>
+    </license>
+    <license>
+      <name>MIT license (covers mruby files)</name>
+      <url>https://raw.githubusercontent.com/mruby/mruby/master/MITL</url>
+    </license>
+  </licenses>
 
   <parent>
     <groupId>jp.pizzafactory</groupId>

@@ -7,7 +7,15 @@
   <artifactId>jp.pizzafactory.mruby.builder.minirake</artifactId>
   <packaging>eclipse-plugin</packaging>
 
-  <name>PizzaFactory for mruby minirake builder</name>
+  <name>Minirake builder</name>
+  <description>Builder to run Minirake script. (mRDT)</description>
+
+  <licenses>
+    <license>
+      <name>Eclipse Public License 1.0</name>
+      <url>https://www.eclipse.org/legal/epl-v10.html</url>
+    </license>
+  </licenses>
 
   <parent>
     <groupId>jp.pizzafactory</groupId>
