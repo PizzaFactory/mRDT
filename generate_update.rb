@@ -3,7 +3,8 @@
 require "fileutils"
 
 REPOSITORY_NAME="mRDT for PizzaFactory Update Site"
-BASE_URL="http://update.pizzafactory.jp/mruby"
+#BASE_URL="http://update.pizzafactory.jp/mruby"
+BASE_URL="/mRDT"
 
 def generate_content(base, dirs)
   f = File.open("#{base}/compositeContent.xml", 'w')
