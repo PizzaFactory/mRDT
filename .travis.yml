@@ -8,7 +8,7 @@ before_script:
 - (cd p2repo && git checkout gh-pages)
 script: mvn -f parent/pom.xml install
 after_success:
-- cp -r jp.pizzafactory.mruby-site/target/repository/ p2repo/${PIZZAFACTORY_VERSION}/travis-build-${TRAVIS_BUILD_NUMBER}/
+- cp -r p2update/target/repository/ p2repo/${PIZZAFACTORY_VERSION}/travis-build-${TRAVIS_BUILD_NUMBER}/
 - (cd p2repo && ruby ./generate_update.rb && git add . && git commit -m 'Added by Travis-CI builder.' && git push)
 env:
   global:

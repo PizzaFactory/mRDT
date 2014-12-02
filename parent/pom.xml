@@ -42,7 +42,7 @@
     <module>../jp.pizzafactory.mruby.wizard.newproject.template.yamanekko</module>
     <module>../jp.pizzafactory.mruby.builder.minirake</module>
     <module>../jp.pizzafactory.mruby.wizard.newproject</module>
-    <module>../jp.pizzafactory.mruby-site</module>
+    <module>../p2update</module>
   </modules>
 
   <repositories>
