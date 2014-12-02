@@ -6,7 +6,7 @@ before_script:
 - git clone https://${GH_TOKEN}@github.com/PizzaFactory/mRDT.git p2repo
 - echo "https://${GH_TOKEN}@github.com" > p2repo/.git/credentials
 - (cd p2repo && git checkout gh-pages)
-script: mvn -f jp.pizzafactory.mruby.parent/pom.xml install
+script: mvn -f parent/pom.xml install
 after_success:
 - cp -r jp.pizzafactory.mruby-site/target/repository/ p2repo/${PIZZAFACTORY_VERSION}/travis-build-${TRAVIS_BUILD_NUMBER}/
 - (cd p2repo && ruby ./generate_update.rb && git add . && git commit -m 'Added by Travis-CI builder.' && git push)
