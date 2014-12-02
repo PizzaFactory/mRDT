@@ -3,7 +3,8 @@
       id="jp.pizzafactory.mruby"
       label="PizzaFactory for mruby"
       version="1.0.0.qualifier"
-      provider-name="PizzaFactory Project">
+      provider-name="PizzaFactory Project"
+      plugin="jp.pizzafactory.mruby.branding">
 
    <description url="http://www.pizzafactory.jp/">
       mRuby Development Tool for PizzaFactory.
@@ -63,5 +64,11 @@
          install-size="0"
          version="0.0.0"
          unpack="false"/>
+
+   <plugin
+         id="jp.pizzafactory.mruby.branding"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"/>
 
 </feature>
