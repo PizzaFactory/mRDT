@@ -23,8 +23,8 @@
   </licenses>
 
   <parent>
-    <groupId>jp.pizzafactory</groupId>
-    <artifactId>mruby</artifactId>
+    <groupId>jp.pizzafactory.mruby</groupId>
+    <artifactId>parent</artifactId>
     <version>1.0.0-SNAPSHOT</version>
     <relativePath>../parent/pom.xml</relativePath>
   </parent>
