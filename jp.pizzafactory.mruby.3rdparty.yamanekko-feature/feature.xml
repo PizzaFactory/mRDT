@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="jp.pizzafactory.mruby.3rdparty.yamanekko"
+      label="Templates pack made from Team Yamanekko"
+      version="1.0.0.qualifier"
+      provider-name="PizzaFactory Project">
+
+   <description>
+      Templates pack for New mruby project wizard. This is the extension for mRDT.
+   </description>
+
+   <copyright url="http://www.example.com/copyright">
+      Pack by: Copyright (C) 2014- PizzaFactory Project.
+      Sources by: Copyright (c) 2014 mruby developers 
+   </copyright>
+
+   <license url="">
+      MIT License
+   </license>
+
+   <requires>
+      <import feature="jp.pizzafactory.mruby" version="1.0.0.qualifier"/>
+   </requires>
+
+   <plugin
+         id="jp.pizzafactory.mruby.wizard.newproject.template.yamanekko"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+</feature>

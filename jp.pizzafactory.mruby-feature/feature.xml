@@ -12,14 +12,10 @@
 
    <copyright>
       Copytight (C) 2013,2014 Monami-ya LLC, Japan.
-      There have some source templates provided by mruby project and others.
-      See also copyright notices in template source code.
    </copyright>
 
    <license url="">
       EPL-1.0.
-      Some files packed as templates will be licensed under MIT-style and others.
-      See also copyright notices in template source code.
    </license>
 
    <url>
@@ -39,27 +35,6 @@
 
    <plugin
          id="jp.pizzafactory.mruby.wizard.newproject"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
-         id="jp.pizzafactory.mruby.wizard.newproject.template.forum"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
-         id="jp.pizzafactory.mruby.wizard.newproject.template.monami_ya"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
-         id="jp.pizzafactory.mruby.wizard.newproject.template.yamanekko"
          download-size="0"
          install-size="0"
          version="0.0.0"

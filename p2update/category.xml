@@ -3,6 +3,15 @@
    <feature url="features/jp.pizzafactory.mruby_0.0.0.qualifier.jar" id="jp.pizzafactory.mruby">
       <category name="mRDT for PizzaFactory"/>
    </feature>
+   <feature url="features/jp.pizzafactory.mruby.3rdparty.forum_0.0.0.qualifier.jar" id="jp.pizzafactory.mruby.3rdparty.forum">
+      <category name="mRDT Source templates"/>
+   </feature>
+   <feature url="features/jp.pizzafactory.mruby.3rdparty.monami_ya_0.0.0.qualifier.jar" id="jp.pizzafactory.mruby.3rdparty.monami_ya">
+      <category name="mRDT Source templates"/>
+   </feature>
+   <feature url="features/jp.pizzafactory.mruby.3rdparty.yamanekko_0.0.0.qualifier.jar" id="jp.pizzafactory.mruby.3rdparty.yamanekko">
+      <category name="mRDT Source templates"/>
+   </feature>
    <feature url="org.eclipse.dltk.ruby_3.0.0.v20110424-7Z--E_EkMYXO4k101442" id="org.eclipse.dltk.ruby">
       <category name="mRDT for PizzaFactory"/>
    </feature>
@@ -16,4 +25,5 @@
       <category name="mRDT for PizzaFactory"/>
    </feature>
    <category-def name="mRDT for PizzaFactory" label="mRDT for PizzaFactory"/>
+   <category-def name="mRDT Source templates" label="mRDT Source templates"/>
 </site>
