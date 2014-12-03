@@ -51,15 +51,15 @@
 
   <repositories>
     <repository>
-      <id>PizzaFactory8</id>
-      <name>PizzaFactory 8 Express</name>
-      <url>http://update.pizzafactory.jp/express/8/build_v20121204-0528/</url>
+      <id>PizzaFactory8.5</id>
+      <name>PizzaFactory 8.5 Express</name>
+      <url>http://update.pizzafactory.jp/express/8.5/build_v20141129-0901/</url>
       <layout>p2</layout>
     </repository>
     <repository>
-      <id>Indigo 201106220900</id>
-      <name>Indigo 201106220900</name>
-      <url>http://download.eclipse.org/releases/indigo/201106220900</url>
+      <id>Luna</id>
+      <name>Luna</name>
+      <url>http://download.eclipse.org/releases/luna/</url>
       <layout>p2</layout>
     </repository>
   </repositories>

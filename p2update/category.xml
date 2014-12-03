@@ -12,16 +12,16 @@
    <feature url="features/jp.pizzafactory.mruby.3rdparty.yamanekko_0.0.0.qualifier.jar" id="jp.pizzafactory.mruby.3rdparty.yamanekko">
       <category name="mRDT Source templates"/>
    </feature>
-   <feature url="org.eclipse.dltk.ruby_3.0.0.v20110424-7Z--E_EkMYXO4k101442" id="org.eclipse.dltk.ruby">
+   <feature url="org.eclipse.dltk.ruby_5.0.0.201306060709" id="org.eclipse.dltk.ruby">
       <category name="mRDT for PizzaFactory"/>
    </feature>
-   <feature url="org.eclipse.dltk.core_3.0.0.v20101211-0331-7l-2ED-z0UkhYdtV3_LBO" id="org.eclipse.dltk.core">
+   <feature url="org.eclipse.dltk.core_5.0.0.201306060709" id="org.eclipse.dltk.core">
       <category name="mRDT for PizzaFactory"/>
    </feature>
-   <feature url="org.eclipse.emf.ecore_2.7.1.v20120127-1122" id="org.eclipse.emf.ecore">
+   <feature url="org.eclipse.emf.ecore_2.10.1.v20140901-1043" id="org.eclipse.emf.ecore">
       <category name="mRDT for PizzaFactory"/>
    </feature>
-   <feature url="org.eclipse.emf.common_2.7.1.v20120127-1122" id="org.eclipse.emf.common">
+   <feature url="org.eclipse.emf.common_2.10.1.v20140901-1043" id="org.eclipse.emf.common">
       <category name="mRDT for PizzaFactory"/>
    </feature>
    <category-def name="mRDT for PizzaFactory" label="mRDT for PizzaFactory"/>

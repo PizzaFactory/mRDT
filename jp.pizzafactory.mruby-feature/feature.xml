@@ -23,7 +23,7 @@
    </url>
 
    <requires>
-      <import feature="org.eclipse.dltk.ruby" version="3.0.0.v20110424-7Z--E_EkMYXO4k101442" match="equivalent"/>
+      <import feature="org.eclipse.dltk.ruby" version="5.0.0.201306060709" match="equivalent"/>
    </requires>
 
    <plugin
