@@ -28,7 +28,7 @@
     <tycho-extras.version>0.21.0</tycho-extras.version>
     <tycho-groupid>org.eclipse.tycho</tycho-groupid>
     <pizzafactory-version>8</pizzafactory-version>
-    <github.token.oauth2Token>${env.GH_TOKEN}</github.token.oauth2Token>
+    <github.global.oauth2Token>${env.GH_TOKEN}</github.global.oauth2Token>
   </properties>
 
   <scm>
