@@ -238,18 +238,20 @@
         <groupId>com.github.github</groupId>
         <artifactId>site-maven-plugin</artifactId>
         <version>0.9</version>
+        <configuration>
+          <message>Maven artifacts for ${project.version}</message>
+          <noJekyll>true</noJekyll>
+          <outputDirectory>${project.build.directory}/mvn-repo</outputDirectory>
+          <branch>refs/heads/gh-pages</branch>
+          <repositoryName>mRDT</repositoryName>
+          <repositoryOwner>PizzaFactory</repositoryOwner>
+          <merge>true</merge>
+        </configuration>
         <executions>
           <!-- run site-maven-plugin's 'site' target as part of the build's normal 'deploy' phase -->
           <execution>
             <id>m2repo</id>
             <configuration>
-              <message>Maven artifacts for ${project.version}</message>
-              <noJekyll>true</noJekyll>
-              <outputDirectory>${project.build.directory}/mvn-repo</outputDirectory>
-              <branch>refs/heads/gh-pages</branch>
-              <repositoryName>mRDT</repositoryName>
-              <repositoryOwner>PizzaFactory</repositoryOwner>
-              <merge>true</merge>
               <includes><include>**/*</include></includes>
               <path>m2repo</path>
             </configuration>
@@ -259,12 +261,6 @@
             <phase>deploy</phase>
           </execution>
           <execution>
-            <configuration>
-              <branch>refs/heads/gh-pages</branch>
-              <repositoryName>mRDT</repositoryName>
-              <repositoryOwner>PizzaFactory</repositoryOwner>
-              <merge>true</merge>
-            </configuration>
             <id>site</id>
             <goals>
               <goal>site</goal>
