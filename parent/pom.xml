@@ -28,6 +28,7 @@
     <tycho-extras.version>0.21.0</tycho-extras.version>
     <tycho-groupid>org.eclipse.tycho</tycho-groupid>
     <pizzafactory-version>8</pizzafactory-version>
+    <github.token.oauth2Token>${env.GH_TOKEN}</github.token.oauth2Token>
   </properties>
 
   <scm>
@@ -166,12 +167,6 @@
 
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-deploy-plugin</artifactId>
-        <version>2.7</version>
-      </plugin>
-
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-source-plugin</artifactId>
         <version>2.2.1</version>
       </plugin>
@@ -231,29 +226,59 @@
         </configuration>
       </plugin>
 
-    </plugins>
+      <plugin>
+        <artifactId>maven-deploy-plugin</artifactId>
+        <version>2.8.1</version>
+        <configuration>
+          <altDeploymentRepository>internal.repo::default::file://${project.build.directory}/mvn-repo</altDeploymentRepository>
+        </configuration>
+      </plugin>
 
-    <extensions>
-      <extension>
-        <groupId>net.anzix.aws</groupId>
-        <artifactId>s3-maven-wagon</artifactId>
-        <version>3.2</version>
-      </extension>
-    </extensions>
+      <plugin>
+        <groupId>com.github.github</groupId>
+        <artifactId>site-maven-plugin</artifactId>
+        <version>0.9</version>
+        <configuration>
+          <message>Maven artifacts for ${project.version}</message>
+          <noJekyll>true</noJekyll>
+          <outputDirectory>${project.build.directory}/mvn-repo</outputDirectory>
+          <branch>refs/heads/gh-pages</branch>
+          <repositoryName>mRDT</repositoryName>
+          <repositoryOwner>PizzaFactory</repositoryOwner>
+          <merge>true</merge>
+        </configuration>
+        <executions>
+          <!-- run site-maven-plugin's 'site' target as part of the build's normal 'deploy' phase -->
+          <execution>
+            <id>m2repo</id>
+            <configuration>
+              <includes><include>**/*</include></includes>
+              <path>m2repo</path>
+            </configuration>
+            <goals>
+              <goal>site</goal>
+            </goals>
+            <phase>deploy</phase>
+          </execution>
+          <execution>
+            <id>site</id>
+            <goals>
+              <goal>site</goal>
+            </goals>
+            <phase>site</phase>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
 
   </build>
 
   <distributionManagement>
     <repository>
-      <id>dist-release</id>
-      <name>Release Repository</name>
-      <url>${pizza.dist.release}</url>
+        <id>internal.repo</id>
+        <name>Temporary Staging Repository</name>
+        <url>file://${project.build.directory}/mvn-repo</url>
     </repository>
-    <snapshotRepository>
-      <id>dist-snapshot</id>
-      <name>Snapshot Repository</name>
-      <url>${pizza.dist.snapshot}</url>
-    </snapshotRepository>
   </distributionManagement>
 
 </project>
