@@ -99,26 +99,6 @@
 
       <plugin>
         <groupId>${tycho-groupid}</groupId>
-        <artifactId>tycho-p2-plugin</artifactId>
-        <version>${tycho-version}</version>
-        <executions>
-          <execution>
-            <id>categorization</id>
-            <phase>package</phase>
-            <goals>
-              <goal>category-p2-metadata</goal>
-            </goals>
-          </execution>
-        </executions>
-        <configuration>
-          <metadataRepositoryName>PizzaFactory ${pizzafactory-version}</metadataRepositoryName>
-          <artifactRepositoryName>PizzaFactory ${pizzafactory-version}</artifactRepositoryName>
-          <compressRepository>true</compressRepository>
-        </configuration>
-      </plugin>
-
-      <plugin>
-        <groupId>${tycho-groupid}</groupId>
         <artifactId>tycho-packaging-plugin</artifactId>
         <version>${tycho-extras.version}</version>
         <dependencies>
