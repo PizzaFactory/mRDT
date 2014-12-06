@@ -63,6 +63,12 @@
       <url>http://download.eclipse.org/releases/luna/</url>
       <layout>p2</layout>
     </repository>
+    <repository>
+      <id>JRuby</id>
+      <name>JRuby</name>
+      <url>http://pizzafactory.github.com/jruby.p2/p2update/</url>
+      <layout>p2</layout>
+    </repository>
   </repositories>
 
   <build>
