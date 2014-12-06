@@ -12,7 +12,7 @@ after_success:
 - (cd p2repo && ruby ./generate_update.rb && git add . && git commit -m 'Added by Travis-CI builder.' && git push)
 env:
   global:
-  - MAVEN_OPTS=-Xmx2048m
+  - MAVEN_OPTS=-Xmx1024m
   - PIZZAFACTORY_VERSION=8.5
   - GIT_COMMITTER_NAME="Masaki Muranaka"
   - GIT_COMMITTER_EMAIL="monaka@monami-ya.jp"
