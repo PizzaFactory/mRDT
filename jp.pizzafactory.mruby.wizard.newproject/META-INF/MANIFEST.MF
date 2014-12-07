@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: New Project Wizard
 Bundle-SymbolicName: jp.pizzafactory.mruby.wizard.newproject;singleton:=true
-Bundle-Version: 1.0.0.qualifier
+Bundle-Version: 8.5.0.qualifier
 Bundle-Activator: jp.pizzafactory.mruby.wizard.newproject.Activator
 Bundle-Vendor: PizzaFactory Project
 Require-Bundle: org.eclipse.ui,

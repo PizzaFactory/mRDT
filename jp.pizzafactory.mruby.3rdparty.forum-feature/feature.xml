@@ -2,7 +2,7 @@
 <feature
       id="jp.pizzafactory.mruby.3rdparty.forum"
       label="Template pack made from mruby forum"
-      version="1.0.0.qualifier"
+      version="8.5.0.qualifier"
       provider-name="PizzaFactory Project">
 
    <description>

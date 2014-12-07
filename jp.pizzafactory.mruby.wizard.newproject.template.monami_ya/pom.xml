@@ -32,7 +32,7 @@ Public Domain, no restrictions.
   <parent>
     <groupId>jp.pizzafactory.mruby</groupId>
     <artifactId>parent</artifactId>
-    <version>1.0.0-SNAPSHOT</version>
+    <version>8.5.0-SNAPSHOT</version>
     <relativePath>../parent/pom.xml</relativePath>
   </parent>
 

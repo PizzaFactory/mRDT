@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: Mruby template set for yamanekko releases
 Bundle-SymbolicName: jp.pizzafactory.mruby.wizard.newproject.template.yamanekko;singleton:=true
-Bundle-Version: 1.0.0.qualifier
+Bundle-Version: 8.5.0.qualifier
 Bundle-Activator: jp.pizzafactory.mruby.wizard.newproject.template.yamanekko.Activator
 Bundle-Vendor: PizzaFactory Project.
 Require-Bundle: org.eclipse.core.runtime,

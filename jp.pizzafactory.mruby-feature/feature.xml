@@ -2,7 +2,7 @@
 <feature
       id="jp.pizzafactory.mruby"
       label="PizzaFactory for mruby"
-      version="1.0.0.qualifier"
+      version="8.5.0.qualifier"
       provider-name="PizzaFactory Project"
       plugin="jp.pizzafactory.mruby.branding">
 
@@ -19,7 +19,7 @@
    </license>
 
    <url>
-      <discovery label="mRDT for PizzaFactory" url="http://update.pizzafactory.jp/mruby/"/>
+      <discovery label="mRDT for PizzaFactory 8.5" url="http://update.pizzafactory.jp/mruby/8.5"/>
    </url>
 
    <requires>

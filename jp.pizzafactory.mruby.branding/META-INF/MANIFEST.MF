@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: Branding for mRDT
 Bundle-SymbolicName: jp.pizzafactory.mruby.branding;singleton:=true
-Bundle-Version: 1.0.0.qualifier
+Bundle-Version: 8.5.0.qualifier
 Bundle-Vendor: PizzaFactory Project
 Require-Bundle: org.eclipse.ui
 Bundle-ActivationPolicy: lazy

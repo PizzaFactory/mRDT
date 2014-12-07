@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: Minirake Builder
 Bundle-SymbolicName: jp.pizzafactory.mruby.builder.minirake; singleton:=true
-Bundle-Version: 1.0.0.qualifier
+Bundle-Version: 8.5.0.qualifier
 Bundle-Activator: jp.pizzafactory.mruby.builder.minirake.Activator
 Bundle-Vendor: PizzaFactory Project
 Require-Bundle: org.eclipse.ui,

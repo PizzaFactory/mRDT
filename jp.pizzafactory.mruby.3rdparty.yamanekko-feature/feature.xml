@@ -2,7 +2,7 @@
 <feature
       id="jp.pizzafactory.mruby.3rdparty.yamanekko"
       label="Templates pack made from Team Yamanekko"
-      version="1.0.0.qualifier"
+      version="8.5.0.qualifier"
       provider-name="PizzaFactory Project">
 
    <description>

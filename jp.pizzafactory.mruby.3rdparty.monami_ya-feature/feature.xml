@@ -2,7 +2,7 @@
 <feature
       id="jp.pizzafactory.mruby.3rdparty.monami_ya"
       label="Template pack made from Monami-ya.mrb"
-      version="1.0.0.qualifier"
+      version="8.5.0.qualifier"
       provider-name="PizzaFactory Project">
 
    <description>
