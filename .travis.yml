@@ -1,14 +1,9 @@
 language: java
-before_script:
-- git config --global user.email "monaka@monami-ya.jp"
-- git config --global user.name "Masaki Muranaka"
-- git config credential.helper "store --file=.git/credentials"
-- git clone https://${GH_TOKEN}@github.com/PizzaFactory/mRDT.git p2repo
-- echo "https://${GH_TOKEN}@github.com" > p2repo/.git/credentials
-- (cd p2repo && git checkout gh-pages)
-script: mvn -f parent/pom.xml -e -X deploy
+script: mvn -f parent/pom.xml deploy
 after_success:
-- (cd p2repo && ruby ./generate_update.rb && git add . && git commit -m 'Added by Travis-CI builder.' && git push)
+- git clone --depth=1 -b gh-pages https://${GH_TOKEN}@github.com/PizzaFactory/mRDT.git gh-pages
+- cd gh-pages
+- mvn process-resources install
 env:
   global:
   - MAVEN_OPTS=-Xmx1024m
