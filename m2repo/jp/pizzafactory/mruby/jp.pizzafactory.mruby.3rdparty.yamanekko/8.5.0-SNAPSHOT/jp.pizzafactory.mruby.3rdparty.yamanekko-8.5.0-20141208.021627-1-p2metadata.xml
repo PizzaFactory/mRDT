@@ -1,0 +1,73 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<units size='2'>
+  <unit id='jp.pizzafactory.mruby.3rdparty.yamanekko.feature.group' version='8.5.0.v20141207-2216' singleton='false'>
+    <update id='jp.pizzafactory.mruby.3rdparty.yamanekko.feature.group' range='[0.0.0,8.5.0.v20141207-2216)' severity='0'/>
+    <properties size='7'>
+      <property name='org.eclipse.equinox.p2.name' value='Templates pack made from Team Yamanekko'/>
+      <property name='org.eclipse.equinox.p2.description' value='Templates pack for New mruby project wizard. This is the extension for mRDT.'/>
+      <property name='org.eclipse.equinox.p2.provider' value='PizzaFactory Project'/>
+      <property name='org.eclipse.equinox.p2.type.group' value='true'/>
+      <property name='maven-groupId' value='jp.pizzafactory.mruby'/>
+      <property name='maven-artifactId' value='jp.pizzafactory.mruby.3rdparty.yamanekko'/>
+      <property name='maven-version' value='8.5.0-SNAPSHOT'/>
+    </properties>
+    <provides size='1'>
+      <provided namespace='org.eclipse.equinox.p2.iu' name='jp.pizzafactory.mruby.3rdparty.yamanekko.feature.group' version='8.5.0.v20141207-2216'/>
+    </provides>
+    <requires size='3'>
+      <required namespace='org.eclipse.equinox.p2.iu' name='jp.pizzafactory.mruby.feature.group' range='0.0.0'/>
+      <required namespace='org.eclipse.equinox.p2.iu' name='jp.pizzafactory.mruby.wizard.newproject.template.yamanekko' range='[8.5.0.v20141207-2216,8.5.0.v20141207-2216]'/>
+      <required namespace='org.eclipse.equinox.p2.iu' name='jp.pizzafactory.mruby.3rdparty.yamanekko.feature.jar' range='[8.5.0.v20141207-2216,8.5.0.v20141207-2216]'>
+        <filter>
+          (org.eclipse.update.install.features=true)
+        </filter>
+      </required>
+    </requires>
+    <touchpoint id='null' version='0.0.0'/>
+    <licenses size='1'>
+      <license uri='' url=''>
+        MIT License
+      </license>
+    </licenses>
+    <copyright uri='http://www.example.com/copyright' url='http://www.example.com/copyright'>
+      Pack by: Copyright (C) 2014- PizzaFactory Project.&#xA;      Sources by: Copyright (c) 2014 mruby developers
+    </copyright>
+  </unit>
+  <unit id='jp.pizzafactory.mruby.3rdparty.yamanekko.feature.jar' version='8.5.0.v20141207-2216'>
+    <properties size='6'>
+      <property name='org.eclipse.equinox.p2.name' value='Templates pack made from Team Yamanekko'/>
+      <property name='org.eclipse.equinox.p2.description' value='Templates pack for New mruby project wizard. This is the extension for mRDT.'/>
+      <property name='org.eclipse.equinox.p2.provider' value='PizzaFactory Project'/>
+      <property name='maven-groupId' value='jp.pizzafactory.mruby'/>
+      <property name='maven-artifactId' value='jp.pizzafactory.mruby.3rdparty.yamanekko'/>
+      <property name='maven-version' value='8.5.0-SNAPSHOT'/>
+    </properties>
+    <provides size='3'>
+      <provided namespace='org.eclipse.equinox.p2.iu' name='jp.pizzafactory.mruby.3rdparty.yamanekko.feature.jar' version='8.5.0.v20141207-2216'/>
+      <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='feature' version='1.0.0'/>
+      <provided namespace='org.eclipse.update.feature' name='jp.pizzafactory.mruby.3rdparty.yamanekko' version='8.5.0.v20141207-2216'/>
+    </provides>
+    <filter>
+      (org.eclipse.update.install.features=true)
+    </filter>
+    <artifacts size='1'>
+      <artifact classifier='org.eclipse.update.feature' id='jp.pizzafactory.mruby.3rdparty.yamanekko' version='8.5.0.v20141207-2216'/>
+    </artifacts>
+    <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+    <touchpointData size='1'>
+      <instructions size='1'>
+        <instruction key='zipped'>
+          true
+        </instruction>
+      </instructions>
+    </touchpointData>
+    <licenses size='1'>
+      <license uri='' url=''>
+        MIT License
+      </license>
+    </licenses>
+    <copyright uri='http://www.example.com/copyright' url='http://www.example.com/copyright'>
+      Pack by: Copyright (C) 2014- PizzaFactory Project.&#xA;      Sources by: Copyright (c) 2014 mruby developers
+    </copyright>
+  </unit>
+</units>
