@@ -7,7 +7,8 @@ REPOSITORY_NAME="mRDT for PizzaFactory Update Site"
 BASE_URL="/mRDT"
 
 def generate_content(base, dirs)
-  f = File.open("#{base}/compositeContent.xml", 'w')
+  FileUtils.mkdir_p("target/#{base}")
+  f = File.open("target/#{base}/compositeContent.xml", 'w')
   f.print <<__END_CONTENT_HEADER
 <?xml version='1.0' encoding='UTF-8'?>
 <?compositeMetadataRepository version='1.0.0'?>
@@ -30,7 +31,8 @@ __END_CONTENT_FOOTER
 end
 
 def generate_artifacts(base, dirs)
-  f = File.open("#{base}/compositeArtifacts.xml", 'w')
+  FileUtils.mkdir_p("target/#{base}")
+  f = File.open("target/#{base}/compositeArtifacts.xml", 'w')
   f.print <<__END_ARTIFACTS_HEADER
 <?xml version='1.0' encoding='UTF-8'?>
 <?compositeArtifactRepository version='1.0.0'?>
@@ -62,6 +64,6 @@ def check(d)
   generate(d, Dir.glob(d + '/*/'))
 end
 
-Dir.glob("*").each do |d|
+Dir.glob("p2repo/*").each do |d|
   check(d)
 end
