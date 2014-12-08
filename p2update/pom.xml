@@ -52,6 +52,35 @@
         <artifactId>tycho-p2-repository-plugin</artifactId>
         <version>${tycho-version}</version>
       </plugin>
+
+      <plugin>
+        <groupId>com.github.github</groupId>
+        <artifactId>site-maven-plugin</artifactId>
+        <version>0.10</version>
+        <configuration>
+          <message>p2 repository for ${project.version}</message>
+          <noJekyll>true</noJekyll>
+          <outputDirectory>${project.build.directory}/repository</outputDirectory>
+          <branch>refs/heads/gh-pages</branch>
+          <repositoryName>mRDT</repositoryName>
+          <repositoryOwner>PizzaFactory</repositoryOwner>
+          <merge>true</merge>
+        </configuration>
+        <executions>
+          <!-- run site-maven-plugin's 'site' target as part of the build's normal 'deploy' phase -->
+          <execution>
+            <id>p2repo</id>
+            <configuration>
+              <includes><include>**/*</include></includes>
+              <path>p2repo/${pizzafactory-version}/${qualifiedVersion}</path>
+            </configuration>
+            <goals>
+              <goal>site</goal>
+            </goals>
+            <phase>deploy</phase>
+          </execution>
+        </executions>
+      </plugin>
     </plugins>
   </build>
 </project>
