@@ -5,5 +5,5 @@ import org.eclipse.core.runtime.IProgressMonitor;
 
 public interface IMrubyTemplate {
 
-	public void deploy(IProject project, IProgressMonitor monitor);
+    public void deploy(IProject project, IProgressMonitor monitor);
 }

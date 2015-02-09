@@ -11,9 +11,9 @@ import org.eclipse.core.runtime.IProgressMonitor;
  */
 public class NoActionTemplate implements IMrubyTemplate {
 
-	@Override
-	public void deploy(IProject project, IProgressMonitor monitor) {
-		return;
-	}
+    @Override
+    public void deploy(IProject project, IProgressMonitor monitor) {
+        return;
+    }
 
 }
