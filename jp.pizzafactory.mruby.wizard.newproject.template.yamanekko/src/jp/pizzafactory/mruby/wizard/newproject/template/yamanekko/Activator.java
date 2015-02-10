@@ -5,6 +5,7 @@ import org.osgi.framework.BundleContext;
 
 public class Activator implements BundleActivator {
 
+    public static final String PLUGIN_ID = "jp.pizzafactory.mruby.wizard.newproject.template.yamanekko"; //$NON-NLS-1$
     private static BundleContext context;
 
     static BundleContext getContext() {

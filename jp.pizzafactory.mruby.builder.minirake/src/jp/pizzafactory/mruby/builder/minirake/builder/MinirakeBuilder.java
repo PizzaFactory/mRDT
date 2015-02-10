@@ -3,6 +3,7 @@ package jp.pizzafactory.mruby.builder.minirake.builder;
 import java.io.IOException;
 import java.io.PrintStream;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Map;
 
 import jp.pizzafactory.mruby.builder.minirake.Activator;
@@ -16,6 +17,7 @@ import org.eclipse.core.resources.IncrementalProjectBuilder;
 import org.eclipse.core.runtime.CoreException;
 import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.core.runtime.IStatus;
+import org.eclipse.core.runtime.MultiStatus;
 import org.eclipse.core.runtime.Status;
 import org.jruby.embed.LocalContextScope;
 import org.jruby.embed.LocalVariableBehavior;
@@ -33,6 +35,9 @@ public class MinirakeBuilder extends IncrementalProjectBuilder {
     @Override
     protected IProject[] build(int kind, Map<String, String> args,
             IProgressMonitor monitor) throws CoreException {
+        MultiStatus multiStatus = new MultiStatus(Activator.PLUGIN_ID,
+                IStatus.OK, "Error on build", null);
+
         IProject project = getProject();
 
         IFile file = project.getFile("minirake");
@@ -51,7 +56,7 @@ public class MinirakeBuilder extends IncrementalProjectBuilder {
                         LocalVariableBehavior.TRANSIENT);
 
                 String rootPath = project.getLocationURI().getPath();
-                ArrayList<String> arrayList = new ArrayList<String>();
+                List<String> arrayList = new ArrayList<String>();
                 arrayList.add(rootPath);
                 container.setLoadPaths(arrayList);
                 container.setCurrentDirectory(rootPath);
@@ -70,23 +75,40 @@ public class MinirakeBuilder extends IncrementalProjectBuilder {
                 container.runScriptlet("load 'minirake'");
                 container.runScriptlet("RakeApp.new.run");
             } catch (IOException e) {
-                throw new CoreException(new Status(IStatus.ERROR,
-                        Activator.PLUGIN_ID, "Failed to spawn minirake", e));
+                IStatus status = new Status(IStatus.ERROR, Activator.PLUGIN_ID,
+                        "Failed to spawn minirake", e);
+                multiStatus.add(status);
             } finally {
                 try {
                     console.getOutputStream().close();
                 } catch (IOException e) {
+                    IStatus status = new Status(IStatus.ERROR,
+                            Activator.PLUGIN_ID,
+                            "Error in closing the output steam.", e);
+                    multiStatus.add(status);
                 }
                 try {
                     console.getErrorStream().close();
                 } catch (IOException e) {
+                    IStatus status = new Status(IStatus.ERROR,
+                            Activator.PLUGIN_ID,
+                            "Error in closing the error steam.", e);
+                    multiStatus.add(status);
                 }
+
             }
             project.refreshLocal(IResource.DEPTH_INFINITE, monitor);
         } else {
-            debugLog("minirake not found.");
+            IStatus status = new Status(IStatus.ERROR, Activator.PLUGIN_ID,
+                    "minirake not found.", null);
+            multiStatus.add(status);
         }
-        return null;
+
+        if (!multiStatus.isOK()) {
+            throw new CoreException(multiStatus);
+        }
+
+        return new IProject[0];
     }
 
     private void debugLog(String message) {

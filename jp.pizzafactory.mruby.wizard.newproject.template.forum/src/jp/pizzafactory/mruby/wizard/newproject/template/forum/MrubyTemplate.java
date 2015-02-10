@@ -15,54 +15,81 @@ import org.eclipse.core.resources.IFolder;
 import org.eclipse.core.resources.IProject;
 import org.eclipse.core.runtime.CoreException;
 import org.eclipse.core.runtime.IProgressMonitor;
+import org.eclipse.core.runtime.IStatus;
+import org.eclipse.core.runtime.MultiStatus;
+import org.eclipse.core.runtime.Status;
+import org.eclipse.osgi.util.NLS;
 
 public class MrubyTemplate implements IMrubyTemplate {
 
-    @Override
-    public void deploy(IProject project, IProgressMonitor monitor) {
-        URL url = Activator.getContext().getBundle().getEntry("sources.zip");
-        try {
-            ZipInputStream zist = new ZipInputStream(url.openStream());
-            ZipEntry zipEntry;
-            while ((zipEntry = zist.getNextEntry()) != null) {
-                String name = zipEntry.getName();
-                if (zipEntry.isDirectory()) {
-                    IFolder folder = project.getFolder(name);
-                    if (!folder.exists()) {
-                        try {
-                            folder.create(true, true, monitor);
-                        } catch (CoreException e) {
-                            e.printStackTrace();
-                        }
-                    }
-                } else {
-
-                    ByteArrayOutputStream baos = new ByteArrayOutputStream();
-                    while (true) {
-                        byte[] buffer = new byte[1024];
-                        int len = zist.read(buffer);
-                        if (len <= 0) {
-                            break;
-                        }
-                        baos.write(buffer, 0, len);
-                    }
-                    byte[] entryData = baos.toByteArray();
-                    InputStream ist = new ByteArrayInputStream(entryData);
-
-                    IFile file = project.getFile(name);
-                    try {
-                        file.create(ist, true, monitor);
-                    } catch (CoreException e) {
-                        // TODO Auto-generated catch block
-                        e.printStackTrace();
-                    }
-                }
-                zist.closeEntry();
+    private void unzipFolder(String name, IProject project,
+            IProgressMonitor monitor) throws CoreException {
+        IFolder folder = project.getFolder(name);
+        if (!folder.exists()) {
+            try {
+                folder.create(true, true, monitor);
+            } catch (CoreException e) {
+                IStatus status = new Status(IStatus.OK, Activator.PLUGIN_ID,
+                        NLS.bind("Can't create folder {0}", name), e);
+                throw new CoreException(status);
             }
-        } catch (IOException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
         }
     }
 
+    private void unzipFile(String name, IProject project, ZipInputStream zist,
+            IProgressMonitor monitor) throws CoreException, IOException {
+        ByteArrayOutputStream baos = new ByteArrayOutputStream();
+        while (true) {
+            byte[] buffer = new byte[1024];
+            int len = zist.read(buffer);
+            if (len <= 0) {
+                break;
+            }
+            baos.write(buffer, 0, len);
+        }
+        byte[] entryData = baos.toByteArray();
+        InputStream ist = new ByteArrayInputStream(entryData);
+
+        IFile file = project.getFile(name);
+        file.create(ist, true, monitor);
+    }
+
+    private void unzip(IProject project, IProgressMonitor monitor)
+            throws IOException, CoreException {
+        MultiStatus multiStatus = new MultiStatus(Activator.PLUGIN_ID,
+                IStatus.OK, "Error(s) in setup mruby environment.", null);
+
+        URL url = Activator.getContext().getBundle().getEntry("sources.zip");
+        ZipInputStream zist = new ZipInputStream(url.openStream());
+        ZipEntry zipEntry;
+        while ((zipEntry = zist.getNextEntry()) != null) {
+            try {
+                String name = zipEntry.getName();
+                if (zipEntry.isDirectory()) {
+                    unzipFolder(name, project, monitor);
+                } else {
+                    unzipFile(name, project, zist, monitor);
+                }
+            } catch (CoreException e) {
+                multiStatus.add(e.getStatus());
+            }
+            zist.closeEntry();
+        }
+
+        if (!multiStatus.isOK()) {
+            throw new CoreException(multiStatus);
+        }
+    }
+
+    @Override
+    public void deploy(IProject project, IProgressMonitor monitor)
+            throws CoreException {
+        try {
+            unzip(project, monitor);
+        } catch (IOException e) {
+            Status status = new Status(IStatus.ERROR, Activator.PLUGIN_ID,
+                    "sources.zip may be broken.", e);
+            throw new CoreException(status);
+        }
+    }
 }

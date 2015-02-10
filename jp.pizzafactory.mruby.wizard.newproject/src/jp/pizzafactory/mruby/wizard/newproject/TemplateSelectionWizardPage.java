@@ -35,11 +35,11 @@ public class TemplateSelectionWizardPage extends WizardPage {
 
     }
 
-    ArrayList<IMrubyTemplate> templateList = new ArrayList<IMrubyTemplate>();
+    java.util.List<IMrubyTemplate> templateList = new ArrayList<IMrubyTemplate>();
     List list;
 
     private void setNoActionTemplate() {
-        assert (list != null);
+        assert list != null;
         list.add("Empty (no deploy)");
         templateList.add(new NoActionTemplate());
     }
@@ -70,7 +70,7 @@ public class TemplateSelectionWizardPage extends WizardPage {
                     String elementName = element.getName();
                     String name;
                     Object instance;
-                    if (elementName.equals("template")) {
+                    if ("template".equals(elementName)) {
                         instance = element.createExecutableExtension("class");
                         name = element.getAttribute("name");
                         if (instance != null && name != null) {
@@ -92,7 +92,8 @@ public class TemplateSelectionWizardPage extends WizardPage {
         setControl(composite);
     }
 
-    public void deploy(IProject project, IProgressMonitor monitor) {
+    public void deploy(IProject project, IProgressMonitor monitor)
+            throws CoreException {
         int index = list.getSelectionIndex();
         IMrubyTemplate instance = templateList.get(index);
         instance.deploy(project, monitor);

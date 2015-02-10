@@ -25,12 +25,15 @@ import org.eclipse.ui.IWorkbench;
 
 public class MinirakeProjectWizard extends Wizard implements INewWizard,
         IRunnableWithProgress {
+    static final String CCNATURE_ID = "org.eclipse.cdt.core.ccnature";
+
     NewWizardPage newWizardPage = new NewWizardPage("New Mruby Project");
     TemplateSelectionWizardPage templateSelectionWizardPage = new TemplateSelectionWizardPage(
             "Select code template");
 
     @Override
     public void init(IWorkbench workbench, IStructuredSelection selection) {
+        /* nothing to do */
     }
 
     @Override
@@ -60,8 +63,6 @@ public class MinirakeProjectWizard extends Wizard implements INewWizard,
         }
         return false;
     }
-
-    static final String CCNATURE_ID = "org.eclipse.cdt.core.ccnature";
 
     @Override
     public void run(IProgressMonitor monitor) throws InvocationTargetException,
