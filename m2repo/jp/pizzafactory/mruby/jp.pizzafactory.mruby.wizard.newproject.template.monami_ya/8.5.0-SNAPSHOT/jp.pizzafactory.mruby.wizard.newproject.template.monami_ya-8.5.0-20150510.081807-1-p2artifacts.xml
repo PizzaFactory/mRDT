@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?artifactRepository version='1.1.0'?>
+<artifacts size='1'>
+  <artifact classifier='osgi.bundle' id='jp.pizzafactory.mruby.wizard.newproject.template.monami_ya' version='8.5.0.v20150210-0537'>
+    <properties size='5'>
+      <property name='artifact.size' value='359718'/>
+      <property name='download.size' value='359718'/>
+      <property name='maven-groupId' value='jp.pizzafactory.mruby'/>
+      <property name='maven-artifactId' value='jp.pizzafactory.mruby.wizard.newproject.template.monami_ya'/>
+      <property name='maven-version' value='8.5.0-SNAPSHOT'/>
+    </properties>
+  </artifact>
+</artifacts>
