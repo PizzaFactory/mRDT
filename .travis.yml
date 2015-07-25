@@ -1,4 +1,5 @@
 language: java
+sudo: false
 script: mvn -f parent/pom.xml deploy
 after_success:
 - git clone --depth=1 -b gh-pages https://${GH_TOKEN}@github.com/PizzaFactory/mRDT.git gh-pages
