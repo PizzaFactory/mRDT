@@ -1,4 +1,6 @@
 language: java
+jdk:
+- oraclejdk8
 sudo: false
 script: mvn -f parent/pom.xml deploy
 after_success:
@@ -7,7 +9,6 @@ after_success:
 - mvn process-resources install
 env:
   global:
-  - MAVEN_OPTS=-Xmx1024m
   - PIZZAFACTORY_VERSION=8.5
   - GIT_COMMITTER_NAME="Masaki Muranaka"
   - GIT_COMMITTER_EMAIL="monaka@monami-ya.jp"
