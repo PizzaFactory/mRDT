@@ -5,20 +5,20 @@
   <version>8.5.0-SNAPSHOT</version>
   <versioning>
     <snapshot>
-      <timestamp>20150804.035004</timestamp>
+      <timestamp>20150901.065755</timestamp>
       <buildNumber>1</buildNumber>
     </snapshot>
-    <lastUpdated>20150804035004</lastUpdated>
+    <lastUpdated>20150901065755</lastUpdated>
     <snapshotVersions>
       <snapshotVersion>
         <extension>target</extension>
-        <value>8.5.0-20150804.035004-1</value>
-        <updated>20150804035004</updated>
+        <value>8.5.0-20150901.065755-1</value>
+        <updated>20150901065755</updated>
       </snapshotVersion>
       <snapshotVersion>
         <extension>pom</extension>
-        <value>8.5.0-20150804.035004-1</value>
-        <updated>20150804035004</updated>
+        <value>8.5.0-20150901.065755-1</value>
+        <updated>20150901065755</updated>
       </snapshotVersion>
     </snapshotVersions>
   </versioning>
