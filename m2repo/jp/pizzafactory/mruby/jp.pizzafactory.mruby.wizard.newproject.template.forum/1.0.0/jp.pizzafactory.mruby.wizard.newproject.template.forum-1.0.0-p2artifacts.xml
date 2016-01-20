@@ -3,8 +3,8 @@
 <artifacts size='1'>
   <artifact classifier='osgi.bundle' id='jp.pizzafactory.mruby.wizard.newproject.template.forum' version='1.0.0'>
     <properties size='5'>
-      <property name='artifact.size' value='323726'/>
-      <property name='download.size' value='323726'/>
+      <property name='artifact.size' value='323725'/>
+      <property name='download.size' value='323725'/>
       <property name='maven-groupId' value='jp.pizzafactory.mruby'/>
       <property name='maven-artifactId' value='jp.pizzafactory.mruby.wizard.newproject.template.forum'/>
       <property name='maven-version' value='1.0.0'/>
