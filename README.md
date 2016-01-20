@@ -1,6 +1,8 @@
 mRDT
 ====
 
+[![Join the chat at https://gitter.im/PizzaFactory/mRDT](https://badges.gitter.im/PizzaFactory/mRDT.svg)](https://gitter.im/PizzaFactory/mRDT?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 mruby development environment for Eclipse platform
 
 CI build status
